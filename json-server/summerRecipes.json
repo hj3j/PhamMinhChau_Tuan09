@@ -1,0 +1,91 @@
+{
+    "summerRecipes": [
+      {
+        "id": 1,
+        "image": "/images/italian-tomato.jpg",
+        "title": "Italian-style tomato",
+        "time": "16 minutes"
+      },
+      {
+        "id": 2,
+        "image": "/images/spaghetti.jpg",
+        "title": "Spaghetti with vegetables and shrimp",
+        "time": "15 minutes"
+      },
+      {
+        "id": 3,
+        "image": "/images/lotus-salad.jpg",
+        "title": "Lotus delight salad",
+        "time": "20 minutes"
+      },
+      {
+        "id": 4,
+        "image": "/images/snack-cakes.jpg",
+        "title": "Snack cakes",
+        "time": "21 minutes"
+      }
+    ],
+
+    "videoRecipes": [
+      {
+        "id": 1,
+        "image": "/images/salad-cabbage-shrimp.jpg",
+        "title": "Salad with cabbage and shrimp",
+        "time": "32 minutes"
+      },
+      {
+        "id": 2,
+        "image": "/images/salad-beans-shrimp.jpg",
+        "title": "Salad of cove beans, shrimp and potatoes",
+        "time": "20 minutes"
+      },
+      {
+        "id": 3,
+        "image": "/images/sunny-side-up.jpg",
+        "title": "Sunny-side up fried egg",
+        "time": "15 minutes"
+      },
+      {
+        "id": 4,
+        "image": "/images/lotus-delight-salad-video.jpg",
+        "title": "Lotus delight salad",
+        "time": "26 minutes"
+      } 
+    ],
+
+    "editorPicks": [
+      {
+        "id": 1,
+        "image": "/images/stuffed-rice-ball.jpg",
+        "title": "Stuffed sticky rice ball",
+        "time": "24 minutes",
+        "authorName": "Jennifer King",
+        "authorAvatar": "/avatars/jennifer.jpg" 
+      },
+      {
+        "id": 2,
+        "image": "/images/strawberry-smoothie.jpg",
+        "title": "Strawberry smoothie",
+        "time": "40 minutes",
+        "authorName": "Matthew Martinez",
+        "authorAvatar": "/avatars/matthew.jpg"
+      },
+      {
+        "id": 3,
+        "image": "/images/latte-art.jpg",
+        "title": "Latte Art",
+        "time": "18 minutes",
+        "authorName": "Sarah Hill",
+        "authorAvatar": "/avatars/sarah.jpg"
+      },
+      {
+        "id": 4,
+        "image": "/images/butter-noodles.jpg",
+        "title": "Butter fried noodles",
+        "time": "16 minutes",
+        "authorName": "Julia Lopez",
+        "authorAvatar": "/avatars/julia.jpg"
+      }
+      
+    ]
+  }
