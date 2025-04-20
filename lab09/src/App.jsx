@@ -1,10 +1,10 @@
-import { useState } from 'react'
 import './App.css'
 import Header from './component/Header'
 import RecipeCard from './component/RecipeCard '
-import Content from './component/Content '
 import Footer from './component/Footer'
 import {BrowserRouter} from 'react-router-dom'
+import Rout from './component/Rout'
+import HomePageContent from './component/HomePageContent '
 
 function App() {
 
@@ -14,11 +14,7 @@ function App() {
    
           <div className="app-container">
               <Header />
-              <div className="top-section-background">
-                <RecipeCard />
-              </div>
-              <Content />
-              
+              <Rout/>
               <Footer />
         </div>
 </>

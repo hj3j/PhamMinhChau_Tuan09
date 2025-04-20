@@ -796,5 +796,15 @@ background-color: #d81b60; /* Darker pink on hover */
 }
 
 .footer-policy-links a:hover {
-   color: #fff; /* White color on hover */
+   color: #fff; 
+}
+
+   /* NOT FIND *******************************************************************************************/
+.notFind {
+  min-height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+
 }

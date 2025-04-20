@@ -23,7 +23,7 @@ function Header() {
 
       <div className="header-right">
         <nav className="navigation">
-          <NavLink to = "/what-to-cook" className= {({isActive})=> `child ${ isActive ? 'active' : ''}`}>What to cook</NavLink>
+          <NavLink to = "/" className= {({isActive})=> `child ${ isActive ? 'active' : ''}`}>What to cook</NavLink>
           <NavLink to = "/recipes" className= {({isActive})=> `child ${ isActive ? 'active' : ''}`}>Recipes</NavLink>
           <NavLink to = "/ingredients" className= {({isActive})=> `child ${ isActive ? 'active' : ''}`}>Ingredients</NavLink>
           <NavLink to = "/occasions" className= {({isActive})=> `child ${ isActive ? 'active' : ''}`}>Occasions</NavLink>
