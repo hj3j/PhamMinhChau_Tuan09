@@ -1,5 +1,6 @@
 import React from 'react'
 import '../App.css'
+import { NavLink} from 'react-router-dom'
 
 function Header() {
   return (
@@ -22,13 +23,12 @@ function Header() {
 
       <div className="header-right">
         <nav className="navigation">
-          <ul>
-            <li><a href="#what-to-cook">What to cook</a></li>
-            <li><a href="#recipes">Recipes</a></li>
-            <li><a href="#ingredients">Ingredients</a></li>
-            <li><a href="#occasions">Occasions</a></li>
-            <li><a href="#about-us">About Us</a></li>
-          </ul>
+          <NavLink to = "/what-to-cook" className= {({isActive})=> `child ${ isActive ? 'active' : ''}`}>What to cook</NavLink>
+          <NavLink to = "/recipes" className= {({isActive})=> `child ${ isActive ? 'active' : ''}`}>Recipes</NavLink>
+          <NavLink to = "/ingredients" className= {({isActive})=> `child ${ isActive ? 'active' : ''}`}>Ingredients</NavLink>
+          <NavLink to = "/occasions" className= {({isActive})=> `child ${ isActive ? 'active' : ''}`}>Occasions</NavLink>
+          <NavLink to = "/about-us" className= {({isActive})=> `child ${ isActive ? 'active' : ''}`}>About Us</NavLink>
+
         </nav>
         <div className="auth-buttons">
           <button className="login-button">Login</button>

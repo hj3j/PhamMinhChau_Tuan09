@@ -21,7 +21,7 @@ body {
   grid-area: header; /* Assign to header grid area */
   width: 100%; /* Ensure it takes full width of its grid area */
   background-color: #4CAF50; /* Arbitrary Green */
-  color: white;
+  color: #aaa;
   padding: 20px;
   text-align: center;
   box-sizing: border-box; /* Include padding in element's total width */
@@ -164,21 +164,24 @@ body {
   gap: 20px; /* Space between navigation links */
 }
 
-.navigation li {
+.navigation .child {
   display: inline-block; /* Display list items horizontally (alternative to flex on ul) */
+  margin: 0px 10px;
 }
 
-.navigation a {
+.navigation  .child {
   text-decoration: none; /* Remove underline from links */
-  color: #555; /* Dark grey text for links */
+  color: #737373; /* Dark grey text for links */
   font-size: 0.95em; /* Font size for links */
   font-weight: 400; /* Normal font weight */
   transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
-.navigation a:hover {
-  color: #e91e63; /* Pink color on hover */
+.navigation .active{
+  color: #e91e63;
+  font-weight: bold;
 }
+
 
 .auth-buttons {
   display: flex; /* Use Flexbox to arrange buttons */
