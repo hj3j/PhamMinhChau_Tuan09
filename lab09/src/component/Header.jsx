@@ -5,21 +5,18 @@ function Header() {
   return (
     <header className="header">
         <div className="header-left">
-        {/* Placeholder for Logo */}
         <div className="logo">
-          {/* <img src="/path/to/your/logo.png" alt="Chefify Logo" /> */}
-          🍳
+          <img src="/Group 9.png" alt="Chefify Logo" />
         </div>
-        <span className="site-title">Chefify</span>
       </div>
 
       <div className="header-middle">
         <div className="search-bar">
-          <input type="text" placeholder="What would you like to cook?" />
-          <button className="search-icon">
-            {/* Placeholder for Search Icon */}
-            🔍
-          </button>
+            <button className="search-icon">
+                 <img src="/Search.png" alt="" />
+            </button>
+            <input type="text" placeholder="What would you like to cook?" />
+          
         </div>
       </div>
 

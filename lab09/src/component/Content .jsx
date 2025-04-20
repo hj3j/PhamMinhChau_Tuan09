@@ -129,20 +129,34 @@ function Content () {
 
   const EditorPickRecipeCard = ({ recipe }) => {
     return (
-      <div className="editor-pick-card"> {/* Class name khớp với CSS */}
-        <img src={recipe.image} alt={recipe.title} className="editor-card-image" />
+        <div className="editor-pick-card"> {/* Container chính của MỘT thẻ */}
+
+        {recipe.image && <img src={recipe.image} alt={recipe.title} className="editor-card-image" />}
+  
+         <span className="editor-card-save">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+          </span>
+  
+        {/* --- 3. Phần thông tin (Nằm ở bên phải ảnh) --- */}
         <div className="editor-card-info">
-          <h4 className="editor-card-title">{recipe.title}</h4>
-          <div className="editor-card-time">{recipe.time}</div>
+          {/* 3a. Tiêu đề công thức */}
+          {recipe.title && <h4 className="editor-card-title">{recipe.title}</h4>}
+          {/* 3b. Thời gian nấu */}
+          {recipe.time && <div className="editor-card-time">{recipe.time}</div>}
   
-          <div className="editor-card-author">
-              <img src={recipe.authorAvatar} alt={recipe.authorName} className="author-avatar" />
-              <span className="author-name">{recipe.authorName}</span>
-          </div>
+          {/* 3c. Thông tin tác giả (ảnh avatar và tên) */}
+          {/* Chỉ render div này nếu có ít nhất avatar hoặc tên tác giả */}
+          {(recipe.authorAvatar || recipe.authorName) && (
+            <div className="editor-card-author">
+                {recipe.authorAvatar && <img src={recipe.authorAvatar} alt={recipe.authorName} className="author-avatar" />}
+                {recipe.authorName && <span className="author-name">{recipe.authorName}</span>}
+            </div>
+          )}
   
-           <span className="editor-card-save">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
-            </span>
+          {/* --- 3d. Nội dung mô tả --- */}
+          {/* Kiểm tra nếu có nội dung mô tả thì mới render thẻ <p> */}
+          {recipe.description && <p className="editor-card-description">{recipe.description}</p>}
+          {/* -------------------------- */}
         </div>
       </div>
     );
@@ -177,20 +191,27 @@ function Content () {
       </div>
        {/* ------------------------------------ */}
 
+        {/* --- Phần Editor's Pick --- */}
+       <div className="content-section-container" style={{ marginTop: '60px' }}> {/* Container cho riêng phần Editor's Pick */}
+         <div className="content-header"> {/* Tiêu đề và phụ đề của riêng phần này */}
+           <h2 className="content-title">Editor's pick</h2>
+           <p className="content-subtitle">Curated Culinary Delights: Handpicked Favorites by Our Expert Editors!</p>
+         </div>
 
-        {/* --- Phần MỚI: Editor's Pick --- */}
-        <div className="content-header" style={{ marginTop: '60px' }}> {/* Thêm khoảng cách */}
-         <h2 className="content-title">Editor's pick</h2> {/* Tiêu đề mới */}
-         <p className="content-subtitle">Curated Culinary Delights: Handpicked Favorites by Our Expert Editors!</p>{/* Phụ đề mới */}
+         {/* --- CONTAINER LƯỚI: Dùng .map() ở đây để render ra NHIỀU thẻ --- */}
+         <div className="editor-picks-grid"> {/* Container LƯỚI này sẽ chứa các thẻ con */}
+           {/* Vòng lặp .map() qua MẢNG editorPicks */}
+           {editorPicks.map(recipe => (
+             // Với MỖI 'recipe' trong mảng, tạo ra MỘT component EditorPickRecipeCard
+             // Component EditorPickRecipeCard này đã được code để hiển thị ĐẦY ĐỦ các thành phần của 1 thẻ
+             <EditorPickRecipeCard key={recipe.id} recipe={recipe} />
+           ))}
+         </div>
+        {/* ----------------------------------------------------------------- */}
        </div>
-       <div className="editor-picks-grid"> {/* Lưới MỚI cho Editor's Pick - có thể dùng class riêng để style khác nếu cần */}
-         {editorPicks.map(recipe => (
-           // Sử dụng lại component EditorPickRecipeCard đã code trước đó
-           <EditorPickRecipeCard key={recipe.id} recipe={recipe} />
-         ))}
-       </div>
-      {/* ----------------------------- */}
-        
+      {/* ------------------------- */}
+
+         
       </main>
   )
 }

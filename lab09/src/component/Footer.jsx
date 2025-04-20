@@ -55,7 +55,7 @@ function Footer() {
 <div className="footer-bottom"> {/* Bottom row for logo, copyright, and policy links */}
  <div className="footer-logo">
    {/* Placeholder for Logo - Use the same as header or a footer specific one */}
-   🍳
+   <img src="/Group 9.png" alt="" />
  </div>
  <span className="footer-copyright">&copy; 2023 Chefify Company</span>
  <div className="footer-policy-links">
